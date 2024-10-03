@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.1.0/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900|Material+Icons" rel="stylesheet"
+        type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/quasar@2.1.0/dist/quasar.umd.prod.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"
+        integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+
+<body style="background-color: rgba(0, 0, 0, 0); font-family: 'Roboto', sans-serif !important;">
+    <div id="qbcore-inventory">
+        <div class="inventory-info">
+            <div class="player-inv-info">
+                <span class="namejs" id="player-inv-label">Cidadão</span><br>
+                <div class="cash-gold-container">
+                    <span class="cashjs" id="player-cash">100</span>
+                    <span class="goldjs" id="player-gold">100</span>
+                </div>
+                <div class="id-container">
+                    <span class="idjs" id="player-id">ID 1</span>
+                </div>
+                <!-- <img class="weight-img" src="images/weight.png"> -->
+                <div>
+                    <!--<div id="progressbar">
+                        <div class="pro"></div>
+                    </div>-->
+                </div>
+                <span id="player-inv-weight"></span>
+            </div>
+            <div class="other-inv-info">
+                <span id="other-inv-label"></span><br>
+                <!-- <img class="weight-img-other" src="images/weight.png"> -->
+                <div>
+                    <!--<div id="progressbar-other">
+                        <div class="pro1"></div>
+                    </div>-->
+                </div>
+                <span id="other-inv-weight"></span>
+            </div>
+        </div>
+        <div class="inv-container">
+            <div class="ply-inv-container">
+                <div class="player-inventory-bg">
+                    <div class="inv-dragger"></div>
+                    <div class="inventory-info">
+                        <div class="player-inv-info">
+                            <!-- <img class="weight-img" src="images/weight.png"> -->
+                            <!-- <div id="progressbar"> -->
+                            <!-- <div class="pro"></div> -->
+                            <span id="player-inv-weight"></span>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="player-inventory" data-inventory="player"></div>
+                    <div class="player-inventory-first" data-inventory="player"></div>
+                    <div class="ply-iteminfo-container">
+                        <div class="ply-iteminfo">
+                            <div class="iteminfo-content">
+                                <div class="item-info-title"></div>
+                                <!-- <div class="item-info-line"></div> -->
+                                <div class="item-info-description"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inv-options">
+                        <div class="settings-wrapper">
+                            <div id="settings-btn"><svg fill="#ffffff" version="1.1" id="Capa_1"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    width="20px" height="20px" viewBox="0 0 45.973 45.973" xml:space="preserve"
+                                    stroke="#ffffff">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g>
+                                            <g>
+                                                <path
+                                                    d="M43.454,18.443h-2.437c-0.453-1.766-1.16-3.42-2.082-4.933l1.752-1.756c0.473-0.473,0.733-1.104,0.733-1.774 c0-0.669-0.262-1.301-0.733-1.773l-2.92-2.917c-0.947-0.948-2.602-0.947-3.545-0.001l-1.826,1.815 C30.9,6.232,29.296,5.56,27.529,5.128V2.52c0-1.383-1.105-2.52-2.488-2.52h-4.128c-1.383,0-2.471,1.137-2.471,2.52v2.607 c-1.766,0.431-3.38,1.104-4.878,1.977l-1.825-1.815c-0.946-0.948-2.602-0.947-3.551-0.001L5.27,8.205 C4.802,8.672,4.535,9.318,4.535,9.978c0,0.669,0.259,1.299,0.733,1.772l1.752,1.76c-0.921,1.513-1.629,3.167-2.081,4.933H2.501 C1.117,18.443,0,19.555,0,20.935v4.125c0,1.384,1.117,2.471,2.501,2.471h2.438c0.452,1.766,1.159,3.43,2.079,4.943l-1.752,1.763 c-0.474,0.473-0.734,1.106-0.734,1.776s0.261,1.303,0.734,1.776l2.92,2.919c0.474,0.473,1.103,0.733,1.772,0.733 s1.299-0.261,1.773-0.733l1.833-1.816c1.498,0.873,3.112,1.545,4.878,1.978v2.604c0,1.383,1.088,2.498,2.471,2.498h4.128 c1.383,0,2.488-1.115,2.488-2.498v-2.605c1.767-0.432,3.371-1.104,4.869-1.977l1.817,1.812c0.474,0.475,1.104,0.735,1.775,0.735 c0.67,0,1.301-0.261,1.774-0.733l2.92-2.917c0.473-0.472,0.732-1.103,0.734-1.772c0-0.67-0.262-1.299-0.734-1.773l-1.75-1.77 c0.92-1.514,1.627-3.179,2.08-4.943h2.438c1.383,0,2.52-1.087,2.52-2.471v-4.125C45.973,19.555,44.837,18.443,43.454,18.443z M22.976,30.85c-4.378,0-7.928-3.517-7.928-7.852c0-4.338,3.55-7.85,7.928-7.85c4.379,0,7.931,3.512,7.931,7.85 C30.906,27.334,27.355,30.85,22.976,30.85z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="amount-wrapper">
+                                <input type="text" id="item-amount" class="inv-option-item" min="1" max="10000" placeholder="0" pattern="[0-9]" oninput="formatDecimalInput(this)">
+                            </div>
+                            <!-- <div id="clothes-btn" class="inv-option-item"><svg width="40px" height="40px"
+                                    viewBox="-12 -12 72.00 72.00" xmlns="http://www.w3.org/2000/svg" fill="#ffffff"
+                                    stroke="#ffffff" stroke-width="0.00048000000000000007">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke="#CCCCCC" stroke-width="0.288"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <title>clothes-solid</title>
+                                        <g id="Layer_2" data-name="Layer 2">
+                                            <g id="invisible_box" data-name="invisible box">
+                                                <rect width="48" height="48" fill="none"></rect>
+                                            </g>
+                                            <g id="icons_Q2" data-name="icons Q2">
+                                                <path
+                                                    d="M40.7,20.4l-4-3.9V43H11.3V16.5l-4,3.9L1,14.1,9.2,5H19A5.2,5.2,0,0,0,29,5h9.8L47,14.1Z">
+                                                </path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg>
+                            </div> -->
+                            <!-- <div class="inv-option-item" id="item-give"><p>Entregar</p></div> -->
+                        </div>
+                    </div>
+                    <img id="inv-img-bg" src="menu/bgPanel.png">
+                </div>
+            </div>
+            <div class="oth-inv-container">
+                <div class="other-inventory-bg">
+                    <div class="other-inventory" data-inventory="other">
+                        <!-- auto generated -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ply-hotbar-inventory" data-inventory="hotbar">
+            <!-- auto generated -->
+        </div>
+        <div class="inv-background"></div>
+    </div>
+    <!-- <div class="weapon-attachments-container">
+            <div class="weapon-attachments-container-title">Pistol | <span style="font-size: 2vh;">9mm</span></div>
+            <div class="weapon-attachments-container-description">This is a water gun yaay ...</div>
+            <div class="weapon-attachments-container-details"><span style="font-weight: bold; letter-spacing: .1vh;">Serial Number</span><br> 12345678<br><br><span style="font-weight: bold; letter-spacing: .1vh;">Durability</span> <div class="weapon-attachments-container-detail-durability"><div class="weapon-attachments-container-detail-durability-total"></div></div></div>
+            <img src="./attachment_images/weapon_pistol.png" class="weapon-attachments-container-image">
+
+            <div class="weapon-attachments-title"><span style="font-weight: bold; letter-spacing: .1vh;">Attachments</span></div>
+            <div class="weapon-attachments">
+            </div>
+
+            <div class="weapon-attachments-remove"><i class="fas fa-trash"></i></div>
+
+            <div class="weapon-attachments-back"><p>RETURN</p></div>
+        </div> -->
+    <div class="itemboxes-container"></div>
+    <div class="itembox-container template"></div>
+    <div class="requiredItem-container">
+    </div>
+    <div class="z-hotbar-inventory">
+        <!-- auto generated -->
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="js/app.js" defer></script>
+    <div id="contextMenu" class="context-menu" style="display: none;">
+        <div class="context-menu-items">
+            <div id="use-item" class="context-menu-item">Usar</div>
+            <div id="give-item" class="context-menu-item">Entregar</div>
+            <div id="drop-item" class="context-menu-item">Jogar Fora</div>
+        </div>
+    </div>
+    <div class="player-settings">
+        <div class="player-settings-close">X</div>
+        <div class="bg-opacity">
+            <label for="rangeInput">Opacidade do Fundo do Inventário</label>
+            <input type="range" id="rangeInput" min="0" max="100" value="100">
+        </div>
+        <div class="inv-locked">
+            <label for="toggle-switch">Fixar Inventário</label>
+            <label class="switch">
+                <input type="checkbox" id="toggle-switch" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+</body>
+
+</html>
