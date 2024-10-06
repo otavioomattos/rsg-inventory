@@ -437,12 +437,22 @@ function FormatItemInfo(itemData, dom) {
         let quality = itemData.info.quality || 100;
 
         $(".item-info-title").html("<p>" + itemData.label + "</p>");
-        $(".item-info-description").html(
-            additionalInfo + 
-            "<p style='font-size:16px;'>" + itemData.description + "</p>" +
-            "<p style='font-size:16px;'><b>Peso: </b>" + pesoEmKg.toFixed(2) + " KG | <b>Quantidade: </b> " + amount + " | <b>Qualidade: </b> " + 
-            "<a style='font-size:16px;color:green;'>" + Math.floor(quality) + "</a></p>"
-        );
+        if (itemData.price != null) {
+            $(".item-info-description").html(
+                additionalInfo + 
+                "<p style='font-size:16px;'>" + itemData.description + "</p>" +
+                "<p style='font-size:16px;'><b>Weight: </b>" + pesoEmKg.toFixed(2) + " KG | <b>Quantity: </b> " + amount + " | <b>Quality: </b> " + 
+                "<a style='font-size:16px;color:green;'>" + Math.floor(quality) + "</a></p>" +
+                "<p style='font-size:16px;'><b>Price: </b>$" + itemData.price + "</p>" // Added price information
+            );
+        } else {
+            $(".item-info-description").html(
+                additionalInfo + 
+                "<p style='font-size:16px;'>" + itemData.description + "</p>" +
+                "<p style='font-size:16px;'><b>Peso: </b>" + pesoEmKg.toFixed(2) + " KG | <b>Quantidade: </b> " + amount + " | <b>Qualidade: </b> " + 
+                "<a style='font-size:16px;color:green;'>" + Math.floor(quality) + "</a></p>"
+            );
+        }
     }
 }
 
